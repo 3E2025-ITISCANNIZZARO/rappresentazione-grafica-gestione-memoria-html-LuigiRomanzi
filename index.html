@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rappresentazione della Memoria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rappresentazione della Memoria del Sistema</h1>
+        
+        <div class="memory">
+            <div class="segment text">Text Segment (Codice Eseguibile)</div>
+            <div class="segment data">Data Segment (Variabili Globali e Statiche)</div>
+            <div class="segment heap">Heap (Memoria Dinamica)</div>
+            <div class="segment stack">Stack (Chiamate alle Funzioni e Variabili Locali)</div>
+        </div>
+
+        <div class="controls">
+            <button id="allocate">Allocare Memoria nel Heap</button>
+            <button id="deallocate">Deallocare Memoria nel Heap</button>
+            <button id="callFunction">Chiamata Funzione (Stack)</button>
+        </div>
+
+        <div class="legend">
+            <h3>Leggenda:</h3>
+            <ul>
+                <li><span class="text">Text Segment</span>: Contiene il codice eseguibile.</li>
+                <li><span class="data">Data Segment</span>: Contiene variabili globali e statiche.</li>
+                <li><span class="heap">Heap</span>: Memoria allocata dinamicamente.</li>
+                <li><span class="stack">Stack</span>: Contiene le chiamate alle funzioni e le variabili locali.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
