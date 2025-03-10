@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rappresentazione della Memoria</title>
+    <title>Gestione Memoria</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Rappresentazione della Memoria del Sistema</h1>
-        
-        <div class="memory">
-            <div class="segment text">Text Segment (Codice Eseguibile)</div>
-            <div class="segment data">Data Segment (Variabili Globali e Statiche)</div>
-            <div class="segment heap">Heap (Memoria Dinamica)</div>
-            <div class="segment stack">Stack (Chiamate alle Funzioni e Variabili Locali)</div>
+        <h1>Rappresentazione della Gestione della Memoria</h1>
+
+        <div class="memory-segment text">
+            <h2>Text Segment</h2>
+            <p>Contiene il codice eseguibile.</p>
         </div>
 
-        <div class="controls">
-            <button id="allocate">Allocare Memoria nel Heap</button>
-            <button id="deallocate">Deallocare Memoria nel Heap</button>
-            <button id="callFunction">Chiamata Funzione (Stack)</button>
+        <div class="memory-segment data">
+            <h2>Data Segment</h2>
+            <p>Contiene variabili globali e statiche.</p>
+        </div>
+
+        <div class="memory-segment heap">
+            <h2>Heap</h2>
+            <p>Contiene la memoria allocata dinamicamente.</p>
+            <button id="allocateHeap">Allocare memoria</button>
+            <button id="deallocateHeap">Deallocare memoria</button>
+            <div id="heap-allocated">
+                <!-- Memoria allocata dinamicamente sarà mostrata qui -->
+            </div>
+        </div>
+
+        <div class="memory-segment stack">
+            <h2>Stack</h2>
+            <p>Contiene le chiamate alle funzioni e le variabili locali.</p>
+            <button id="simulateCall">Simula chiamata funzione</button>
+            <div id="stack-allocated">
+                <!-- Stack in crescita -->
+            </div>
         </div>
 
         <div class="legend">
-            <h3>Leggenda:</h3>
+            <h3>Leggenda</h3>
             <ul>
-                <li><span class="text">Text Segment</span>: Contiene il codice eseguibile.</li>
-                <li><span class="data">Data Segment</span>: Contiene variabili globali e statiche.</li>
-                <li><span class="heap">Heap</span>: Memoria allocata dinamicamente.</li>
-                <li><span class="stack">Stack</span>: Contiene le chiamate alle funzioni e le variabili locali.</li>
+                <li><span class="legend-box text"></span> Text Segment: Codice eseguibile.</li>
+                <li><span class="legend-box data"></span> Data Segment: Variabili globali e statiche.</li>
+                <li><span class="legend-box heap"></span> Heap: Memoria allocata dinamicamente.</li>
+                <li><span class="legend-box stack"></span> Stack: Funzioni e variabili locali.</li>
             </ul>
         </div>
     </div>
@@ -37,4 +53,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
